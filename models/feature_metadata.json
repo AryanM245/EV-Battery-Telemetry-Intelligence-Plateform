@@ -1,0 +1,75 @@
+{
+  "soh_regressor": {
+    "features": [
+      "Charge_Cycles",
+      "Battery_Temperature",
+      "Battery_Current",
+      "Battery_Voltage",
+      "SoC",
+      "Motor_Temperature",
+      "Ambient_Temperature",
+      "Power_Consumption",
+      "Distance_Traveled"
+    ],
+    "mae": 11.5377,
+    "r2": -0.0004,
+    "importances": {
+      "Charge_Cycles": 0.11813963808695101,
+      "Distance_Traveled": 0.11768454552401715,
+      "Battery_Temperature": 0.11622664596117388,
+      "Ambient_Temperature": 0.11386816007174617,
+      "Motor_Temperature": 0.11090082196676894,
+      "Battery_Current": 0.11083497683982561,
+      "Battery_Voltage": 0.10658952459081848,
+      "Power_Consumption": 0.10509873109042095,
+      "SoC": 0.10065695586827779
+    }
+  },
+  "rul_regressor": {
+    "features": [
+      "SoH",
+      "SoC",
+      "Charge_Cycles",
+      "Component_Health_Score",
+      "Battery_Temperature",
+      "Motor_Temperature",
+      "Motor_Vibration",
+      "Brake_Pad_Wear",
+      "Route_Roughness",
+      "Load_Weight"
+    ],
+    "mae": 59.8529,
+    "r2": -0.0025
+  },
+  "failure_classifier": {
+    "features": [
+      "SoH",
+      "SoC",
+      "Battery_Temperature",
+      "Motor_Temperature",
+      "Motor_Vibration",
+      "Brake_Pad_Wear",
+      "Component_Health_Score",
+      "RUL",
+      "Charge_Cycles"
+    ],
+    "accuracy": 0.9009
+  },
+  "thermal_classifier": {
+    "features": [
+      "Battery_Temperature",
+      "Motor_Temperature",
+      "Ambient_Temperature",
+      "Battery_Current",
+      "SoC",
+      "Power_Consumption"
+    ],
+    "accuracy": 0.8992,
+    "labels": [
+      "LOW",
+      "MEDIUM",
+      "HIGH",
+      "CRITICAL"
+    ]
+  }
+}
